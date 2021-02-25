@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/list_barang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:padding="10dp"
+        android:background="@drawable/sales_bg_kunjungan_adapter">
+        <TextView
+            android:id="@+id/kode_barang1"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:background="@drawable/ic_rectangle_2"
+            android:paddingTop="10dp"
+            android:enabled="false"
+            android:ems="6"
+            android:text="010001"
+            android:textColor="#fcfcfc"
+            android:textAlignment="center"/>
+
+        <TextView
+            android:id="@+id/nama_barang1"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/kode_barang1"
+            android:hint="Nama Barang"
+            android:paddingLeft="5dp"
+            android:textColor="#28306D"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/harga_barang1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/nama_barang1"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:textColor="#FF5949"
+            android:layout_toEndOf="@+id/kode_barang1"/>
+
+        <TextView
+            android:id="@+id/harga_barang2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:textColor="#494949"
+            android:layout_below="@+id/nama_barang1"
+            android:layout_toEndOf="@+id/harga_barang1"
+            android:layout_toRightOf="@+id/harga_barang1"/>
+
+        <TextView
+            android:id="@+id/harga_barang3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:textColor="#494949"
+            android:layout_below="@+id/nama_barang1"
+            android:layout_toEndOf="@+id/harga_barang2"
+            android:layout_toRightOf="@+id/harga_barang2"/>
+
+        <TextView
+            android:id="@+id/harga_barang4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/harga_barang1"
+            android:layout_toEndOf="@+id/kode_barang1"
+            android:layout_toRightOf="@+id/harga_barang1"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:textColor="#494949" />
+
+        <TextView
+            android:id="@+id/harga_barang5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:textColor="#494949"
+            android:layout_below="@+id/harga_barang1"
+            android:layout_toEndOf="@+id/harga_barang4"
+            android:layout_toRightOf="@+id/harga_barang4"/>
+
+        <TextView
+            android:id="@+id/harga_pokok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:textColor="#494949"
+            android:layout_below="@+id/harga_barang1"
+            android:layout_toEndOf="@+id/harga_barang5"
+            android:layout_toRightOf="@+id/harga_barang5"/>
+
+        <TextView
+            android:id="@+id/stok_tersedia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:maxLength="6" />
+
+    </RelativeLayout>
+
+</LinearLayout>

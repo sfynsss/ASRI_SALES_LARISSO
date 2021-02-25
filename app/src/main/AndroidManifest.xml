@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.asa.asribares">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Larisso Sales"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:name=".Session.AplicationClass"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".Activity.act_order"></activity>
+        <activity android:name=".Activity.act_data_order_beli" />
+        <activity android:name=".Activity.act_data_order" />
+        <activity
+            android:name=".Activity.act_data_customer"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity android:name=".Activity.act_kunjungan" />
+        <activity android:name=".Activity.act_cari_barang" />
+        <activity android:name=".Activity.act_data_stok_opname" />
+        <activity android:name=".Activity.act_stok_opname" />
+        <activity android:name=".Activity.act_pilih_gudang" />
+        <activity
+            android:name=".Activity.act_home_barang_datang"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity android:name=".Activity.act_home_sales_order" />
+        <activity
+            android:name=".Activity.act_home_stok_opname"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity android:name=".Activity.act_home_admin" />
+        <activity android:name=".Activity.act_login" />
+        <activity android:name=".Activity.act_setting_url" />
+        <activity android:name=".Activity.act_register" />
+        <activity android:name=".Activity.act_splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

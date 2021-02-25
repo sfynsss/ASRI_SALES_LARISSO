@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="592"
+    android:orientation="vertical"
+    android:background="#fff"
+    tools:context=".Activity.act_login">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="219"
+        android:background="@drawable/sales_bg_login1">
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="249"
+        android:orientation="vertical"
+        android:paddingHorizontal="16dp"
+        android:weightSum="318">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="28"
+            android:text="L O G I N"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimaryDark"
+            android:gravity="center_vertical">
+        </TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="28"
+            android:layout_marginTop="10dp"
+            android:text="Silahkan isi username dan password anda"
+            android:gravity="center_vertical|top">
+        </TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="30">
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="65"
+            android:orientation="horizontal"
+            android:weightSum="10">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="10"
+                android:layout_marginBottom="10dp"
+                android:gravity="center">
+                <EditText
+                    android:id="@+id/username"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@drawable/round"
+                    android:drawablePadding="10dp"
+                    android:hint="Username"
+                    android:inputType="text"
+                    android:paddingLeft="16dp"
+                    android:textColor="#232323"
+                    android:textColorHint="#7b7b7b"
+                    android:drawableLeft="@drawable/ic_person_24"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="65"
+            android:orientation="horizontal"
+            android:weightSum="10">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="10"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <EditText
+                    android:id="@+id/password"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@drawable/round"
+                    android:drawablePadding="10dp"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:paddingLeft="16dp"
+                    android:textColor="#232323"
+                    android:textColorHint="#7b7b7b"
+                    android:drawableLeft="@drawable/ic_password_24"/>
+                <ImageButton
+                    android:id="@+id/lihat_password"
+                    android:layout_marginLeft="-60dp"
+                    style="?android:buttonBarButtonStyle"
+                    android:src="@drawable/ic_baseline_remove_red_eye_24"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="20">
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="82"
+            android:paddingVertical="10dp">
+            <Button
+                android:id="@+id/login"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="MASUK"
+                android:textStyle="bold"
+                android:textColor="#fff"
+                android:background="@drawable/bt_round">
+            </Button>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="124"
+        android:background="@drawable/sales_bg_login2">
+    </LinearLayout>
+
+
+</LinearLayout>

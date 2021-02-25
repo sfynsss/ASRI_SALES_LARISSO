@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F9FB"
+    android:padding="10dp">
+
+    <TableLayout
+        android:id="@+id/table_data_kunjungan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@drawable/sales_bg_kunjungan_adapter">
+
+        <TableRow
+            android:id="@+id/table_list_kunjungan"
+            android:weightSum="5">
+            <TableLayout
+                android:layout_weight="5">
+                <TableRow
+                    android:layout_height="wrap_content"
+                    android:weightSum="4">
+                    <TextView
+                        android:layout_weight="1"
+                        android:text="Kode Cust"
+                        android:textColor="#4B4B4B"/>
+                    <TextView
+                        android:layout_weight="3"
+                        android:text="Nama Customer"
+                        android:textColor="#5F5F5F"
+                        android:textAlignment="textEnd"/>
+                </TableRow>
+
+                <TableRow
+                    android:layout_height="wrap_content"
+                    android:weightSum="4">
+                    <TextView
+                        android:id="@+id/kd_cust_tmp"
+                        android:layout_weight="1"
+                        android:text="010001"
+                        android:textStyle="bold"
+                        android:textColor="#D98A95"/>
+                    <TextView
+                        android:id="@+id/nm_cust_tmp"
+                        android:layout_weight="3"
+                        android:textStyle="bold"
+                        android:textColor="#72D5A9"
+                        android:textAlignment="textEnd"
+                        android:text="AGUS"/>
+                </TableRow>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="3dp"
+                    android:background="#F2F3F5">
+                </View>
+
+
+                <TableRow
+                    android:layout_height="wrap_content"
+                    android:weightSum="4">
+                    <TextView
+                        android:layout_weight="1"
+                        android:textColor="#4B4B4B"
+                        android:text="Tanggal Kunjungan"/>
+                    <TextView
+                        android:id="@+id/tgl_kunjungan_tmp"
+                        android:layout_weight="3"
+                        android:textColor="#28306D"
+                        android:textStyle="bold"
+                        android:textAlignment="textEnd"
+                        android:text="05/18/2018"/>
+                </TableRow>
+
+            </TableLayout>
+        </TableRow>
+
+
+    </TableLayout>
+
+</LinearLayout>
