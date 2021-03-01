@@ -7,7 +7,7 @@
     <LinearLayout
         android:id="@+id/list_customer"
         android:layout_width="match_parent"
-        android:layout_height="180dp"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         android:background="@drawable/sales_bg_kunjungan_adapter">
         <RelativeLayout
@@ -39,19 +39,17 @@
         </View>
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:weightSum="10">
             <LinearLayout
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_weight="6"
-                android:orientation="vertical"
-                android:weightSum="10">
+                android:orientation="vertical">
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="2"
+                    android:layout_height="25dp"
                     android:orientation="horizontal"
                     android:weightSum="10">
                     <TextView
@@ -73,8 +71,29 @@
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1.5">
+                    android:layout_height="25dp"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="Otoritas : ">
+                    </TextView>
+                    <TextView
+                        android:id="@+id/otoritas"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:hint="GROSIR"
+                        android:textColor="#000"
+                        android:textStyle="bold">
+                    </TextView>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp">
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -85,12 +104,11 @@
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="2">
+                    android:layout_height="wrap_content">
                     <TextView
                         android:id="@+id/alamat_customer"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:gravity="center_vertical"
                         android:paddingLeft="10dp"
                         android:textColor="#000"
@@ -100,8 +118,7 @@
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="4.5"
+                    android:layout_height="50dp"
                     android:gravity="center_vertical|start">
                     <Button
                         android:id="@+id/generateBtn"
@@ -120,13 +137,13 @@
             </LinearLayout>
             <LinearLayout
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_weight="4"
                 android:gravity="center">
                 <ImageView
                     android:id="@+id/qrImage"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="125dp"
                     android:src="@drawable/sales_qrcode_placeholder">
                 </ImageView>
             </LinearLayout>

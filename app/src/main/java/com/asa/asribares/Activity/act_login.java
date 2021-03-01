@@ -78,17 +78,17 @@ public class act_login extends AppCompatActivity {
                         @Override
                         public void onResponse(Call<BaseResponse> call, Response<BaseResponse> response) {
                             if (response.isSuccessful()){
-                                login = api.login(user.getText().toString().toUpperCase(), pass.getText().toString());
+                                login = api.login(user.getText().toString(), pass.getText().toString());
                                 login.enqueue(new Callback<UserResponse>() {
                                     @Override
                                     public void onResponse(Call<UserResponse> call, Response<UserResponse> response) {
                                         if (response.isSuccessful()) {
                                             session.setLoggedin(true, response.body().getUser().getId()+"", response.body().getUser().getName()+"", response.body().getUser().getOtoritas().toString()+"", response.body().getUser().getApiToken() + "");
                                             session.setPegawai(response.body().getUser().getName()+"", response.body().getUser().getKdPeg()+"");
-                                            if (response.body().getUser().getOtoritas().toString().equals("1")) {
+                                            if (response.body().getUser().getOtoritas().toString().equals("SUPER ADMIN") || response.body().getUser().getOtoritas().toString().equals("ADMIN")) {
                                                 startActivity(new Intent(act_login.this, act_home_admin.class));
                                                 finish();
-                                            } else if (response.body().getUser().getOtoritas().toString().equals("5")) {
+                                            } else if (response.body().getUser().getOtoritas().toString().equals("SALES")) {
                                                 startActivity(new Intent(act_login.this, act_home_sales_order.class));
                                                 finish();
                                             } else {

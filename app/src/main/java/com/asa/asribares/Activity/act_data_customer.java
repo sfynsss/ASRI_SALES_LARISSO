@@ -49,8 +49,10 @@ public class act_data_customer extends AppCompatActivity {
     AdapterCustomer customerListView;
     ArrayList<String> v_kode_cust = new ArrayList<String>();
     ArrayList<String> v_nama_cust = new ArrayList<String>();
+    ArrayList<String> v_email_cust = new ArrayList<String>();
     ArrayList<String> v_alamat_cust = new ArrayList<String>();
     ArrayList<String> v_aktivasi_cust = new ArrayList<String>();
+    ArrayList<String> v_otoritas = new ArrayList<String>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -85,18 +87,22 @@ public class act_data_customer extends AppCompatActivity {
                         if (response.isSuccessful()) {
                             v_kode_cust.clear();
                             v_nama_cust.clear();
+                            v_email_cust.clear();
                             v_alamat_cust.clear();
                             v_aktivasi_cust.clear();
+                            v_otoritas.clear();
 //                            kode_aktifasi.clear();
                             for (int i = 0; i < response.body().getData().size(); i++) {
                                 v_kode_cust.add(response.body().getData().get(i).getKDCUST());
                                 v_nama_cust.add(response.body().getData().get(i).getNMCUST());
+                                v_email_cust.add(response.body().getData().get(i).getEMAIL());
                                 v_alamat_cust.add(response.body().getData().get(i).getALMCUST());
                                 v_aktivasi_cust.add(response.body().getData().get(i).getActivationToken());
+                                v_otoritas.add(response.body().getData().get(i).getOtoritas());
 //                                kode_aktifasi.add(response.body().getData().get(i).getALMCUST());
                             }
 
-                            customerListView = new AdapterCustomer(act_data_customer.this, v_kode_cust, v_nama_cust, v_alamat_cust, v_aktivasi_cust, new AdapterCustomer.OnEditLocationListener() {
+                            customerListView = new AdapterCustomer(act_data_customer.this, v_kode_cust, v_nama_cust, v_alamat_cust, v_aktivasi_cust, v_email_cust, v_otoritas, new AdapterCustomer.OnEditLocationListener() {
                                 @Override
                                 public void onClickAdapter(int position) {
 

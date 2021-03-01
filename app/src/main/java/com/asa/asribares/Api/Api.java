@@ -173,4 +173,10 @@ public interface Api {
     @GET("Gudang/getRak")
     Call<BaseResponse<rak>> getRak();
 
+    @FormUrlEncoded
+    @POST("generateGrosirToken")
+    Call<BaseResponse1> generateGrosirToken(
+            @Field("email") String email
+    );
+
 }

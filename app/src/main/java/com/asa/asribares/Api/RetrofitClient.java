@@ -19,7 +19,7 @@ public class RetrofitClient {
 
     private final static OkHttpClient client = UnsafeOkHttpClient.getUnsafeOkHttpClient();
     private static RetrofitClient mInstance;
-    private static String BASE_URL = "http://larisso.co.id/api/";
+    private static String BASE_URL = "http://testing.larisso.co.id/api/";
     private static Retrofit retrofit = buildRetrofit(client);
 
     private RetrofitClient() {

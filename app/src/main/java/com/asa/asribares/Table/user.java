@@ -37,7 +37,7 @@ public class user {
     private String fotoKtp;
     @SerializedName("otoritas")
     @Expose
-    private Integer otoritas;
+    private String otoritas;
     @SerializedName("api_token")
     @Expose
     private String apiToken;
@@ -170,11 +170,11 @@ public class user {
         this.fotoKtp = fotoKtp;
     }
 
-    public Integer getOtoritas() {
+    public String getOtoritas() {
         return otoritas;
     }
 
-    public void setOtoritas(Integer otoritas) {
+    public void setOtoritas(String otoritas) {
         this.otoritas = otoritas;
     }
 

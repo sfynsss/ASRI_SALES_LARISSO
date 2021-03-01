@@ -11,12 +11,18 @@ public class customer {
     @SerializedName("NM_CUST")
     @Expose
     private String nMCUST;
+    @SerializedName("E_MAIL")
+    @Expose
+    private String eMAIL;
     @SerializedName("ALM_CUST")
     @Expose
     private String aLMCUST;
     @SerializedName("activation_token")
     @Expose
     private String activationToken;
+    @SerializedName("otoritas")
+    @Expose
+    private String otoritas;
 
     public String getKDCUST() {
         return kDCUST;
@@ -32,6 +38,14 @@ public class customer {
 
     public void setNMCUST(String nMCUST) {
         this.nMCUST = nMCUST;
+    }
+
+    public String getEMAIL() {
+        return eMAIL;
+    }
+
+    public void setEMAIL(String eMAIL) {
+        this.eMAIL = eMAIL;
     }
 
     public String getALMCUST() {
@@ -50,5 +64,11 @@ public class customer {
         this.activationToken = activationToken;
     }
 
+    public String getOtoritas() {
+        return otoritas;
+    }
 
+    public void setOtoritas(String otoritas) {
+        this.otoritas = otoritas;
+    }
 }
