@@ -5,6 +5,9 @@ import com.google.gson.annotations.SerializedName;
 
 public class barang {
 
+    @SerializedName("nmr")
+    @Expose
+    private String nmr;
     @SerializedName("kd_brg")
     @Expose
     private String kdBrg;
@@ -19,7 +22,7 @@ public class barang {
     private String nmBrg;
     @SerializedName("stok")
     @Expose
-    private Integer stok;
+    private String stok;
     @SerializedName("satuan1")
     @Expose
     private String satuan1;
@@ -43,40 +46,75 @@ public class barang {
     private String satTur4;
     @SerializedName("kapasitas2")
     @Expose
-    private Integer kapasitas2;
+    private String kapasitas2;
     @SerializedName("kapasitas3")
     @Expose
-    private Integer kapasitas3;
+    private String kapasitas3;
     @SerializedName("kapasitas4")
     @Expose
-    private Integer kapasitas4;
+    private String kapasitas4;
     @SerializedName("harga_bl")
     @Expose
-    private Double hargaBl;
+    private String hargaBl;
     @SerializedName("harga_jl")
     @Expose
-    private Integer hargaJl;
+    private String hargaJl;
     @SerializedName("harga_jl2")
     @Expose
-    private Integer hargaJl2;
+    private String hargaJl2;
     @SerializedName("harga_jl3")
     @Expose
-    private Integer hargaJl3;
+    private String hargaJl3;
     @SerializedName("harga_jl4")
     @Expose
-    private Integer hargaJl4;
+    private String hargaJl4;
+    @SerializedName("harga_jl5")
+    @Expose
+    private String hargaJl5;
     @SerializedName("qty_min2")
     @Expose
-    private Integer qtyMin2;
+    private String qtyMin2;
     @SerializedName("qty_min3")
     @Expose
-    private Integer qtyMin3;
+    private String qtyMin3;
     @SerializedName("qty_min4")
     @Expose
-    private Integer qtyMin4;
+    private String qtyMin4;
+    @SerializedName("qty_min5")
+    @Expose
+    private String qtyMin5;
     @SerializedName("gambar")
     @Expose
     private String gambar;
+    @SerializedName("disc")
+    @Expose
+    private String disc;
+    @SerializedName("harga_disc")
+    @Expose
+    private String hargaDisc;
+    @SerializedName("sts_tampil")
+    @Expose
+    private String stsTampil;
+    @SerializedName("sts_promo")
+    @Expose
+    private String stsPromo;
+    @SerializedName("sts_point")
+    @Expose
+    private String stsPoint;
+    @SerializedName("sts_poin")
+    @Expose
+    private Object stsPoin;
+    @SerializedName("kd_outlet")
+    @Expose
+    private String kdOutlet;
+
+    public String getNmr() {
+        return nmr;
+    }
+
+    public void setNmr(String nmr) {
+        this.nmr = nmr;
+    }
 
     public String getKdBrg() {
         return kdBrg;
@@ -110,11 +148,11 @@ public class barang {
         this.nmBrg = nmBrg;
     }
 
-    public Integer getStok() {
+    public String getStok() {
         return stok;
     }
 
-    public void setStok(Integer stok) {
+    public void setStok(String stok) {
         this.stok = stok;
     }
 
@@ -174,92 +212,108 @@ public class barang {
         this.satTur4 = satTur4;
     }
 
-    public Integer getKapasitas2() {
+    public String getKapasitas2() {
         return kapasitas2;
     }
 
-    public void setKapasitas2(Integer kapasitas2) {
+    public void setKapasitas2(String kapasitas2) {
         this.kapasitas2 = kapasitas2;
     }
 
-    public Integer getKapasitas3() {
+    public String getKapasitas3() {
         return kapasitas3;
     }
 
-    public void setKapasitas3(Integer kapasitas3) {
+    public void setKapasitas3(String kapasitas3) {
         this.kapasitas3 = kapasitas3;
     }
 
-    public Integer getKapasitas4() {
+    public String getKapasitas4() {
         return kapasitas4;
     }
 
-    public void setKapasitas4(Integer kapasitas4) {
+    public void setKapasitas4(String kapasitas4) {
         this.kapasitas4 = kapasitas4;
     }
 
-    public Double getHargaBl() {
+    public String getHargaBl() {
         return hargaBl;
     }
 
-    public void setHargaBl(Double hargaBl) {
+    public void setHargaBl(String hargaBl) {
         this.hargaBl = hargaBl;
     }
 
-    public Integer getHargaJl() {
+    public String getHargaJl() {
         return hargaJl;
     }
 
-    public void setHargaJl(Integer hargaJl) {
+    public void setHargaJl(String hargaJl) {
         this.hargaJl = hargaJl;
     }
 
-    public Integer getHargaJl2() {
+    public String getHargaJl2() {
         return hargaJl2;
     }
 
-    public void setHargaJl2(Integer hargaJl2) {
+    public void setHargaJl2(String hargaJl2) {
         this.hargaJl2 = hargaJl2;
     }
 
-    public Integer getHargaJl3() {
+    public String getHargaJl3() {
         return hargaJl3;
     }
 
-    public void setHargaJl3(Integer hargaJl3) {
+    public void setHargaJl3(String hargaJl3) {
         this.hargaJl3 = hargaJl3;
     }
 
-    public Integer getHargaJl4() {
+    public String getHargaJl4() {
         return hargaJl4;
     }
 
-    public void setHargaJl4(Integer hargaJl4) {
+    public void setHargaJl4(String hargaJl4) {
         this.hargaJl4 = hargaJl4;
     }
 
-    public Integer getQtyMin2() {
+    public String getHargaJl5() {
+        return hargaJl5;
+    }
+
+    public void setHargaJl5(String hargaJl5) {
+        this.hargaJl5 = hargaJl5;
+    }
+
+    public String getQtyMin2() {
         return qtyMin2;
     }
 
-    public void setQtyMin2(Integer qtyMin2) {
+    public void setQtyMin2(String qtyMin2) {
         this.qtyMin2 = qtyMin2;
     }
 
-    public Integer getQtyMin3() {
+    public String getQtyMin3() {
         return qtyMin3;
     }
 
-    public void setQtyMin3(Integer qtyMin3) {
+    public void setQtyMin3(String qtyMin3) {
         this.qtyMin3 = qtyMin3;
     }
 
-    public Integer getQtyMin4() {
+    public String getQtyMin4() {
         return qtyMin4;
     }
 
-    public void setQtyMin4(Integer qtyMin4) {
+    public void setQtyMin4(String qtyMin4) {
         this.qtyMin4 = qtyMin4;
+    }
+
+    public String getQtyMin5() {
+        return qtyMin5;
+    }
+
+    public void setQtyMin5(String qtyMin5) {
+        this.qtyMin5 = qtyMin5;
     }
 
     public String getGambar() {
@@ -268,6 +322,62 @@ public class barang {
 
     public void setGambar(String gambar) {
         this.gambar = gambar;
+    }
+
+    public String getDisc() {
+        return disc;
+    }
+
+    public void setDisc(String disc) {
+        this.disc = disc;
+    }
+
+    public String getHargaDisc() {
+        return hargaDisc;
+    }
+
+    public void setHargaDisc(String hargaDisc) {
+        this.hargaDisc = hargaDisc;
+    }
+
+    public String getStsTampil() {
+        return stsTampil;
+    }
+
+    public void setStsTampil(String stsTampil) {
+        this.stsTampil = stsTampil;
+    }
+
+    public String getStsPromo() {
+        return stsPromo;
+    }
+
+    public void setStsPromo(String stsPromo) {
+        this.stsPromo = stsPromo;
+    }
+
+    public String getStsPoint() {
+        return stsPoint;
+    }
+
+    public void setStsPoint(String stsPoint) {
+        this.stsPoint = stsPoint;
+    }
+
+    public Object getStsPoin() {
+        return stsPoin;
+    }
+
+    public void setStsPoin(Object stsPoin) {
+        this.stsPoin = stsPoin;
+    }
+
+    public String getKdOutlet() {
+        return kdOutlet;
+    }
+
+    public void setKdOutlet(String kdOutlet) {
+        this.kdOutlet = kdOutlet;
     }
 
 

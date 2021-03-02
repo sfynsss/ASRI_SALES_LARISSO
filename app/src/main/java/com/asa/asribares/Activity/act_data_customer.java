@@ -112,13 +112,17 @@ public class act_data_customer extends AppCompatActivity {
                                 public void onClickAdapter(int position) {
                                     if (getIntent().getStringExtra("status").equals("kunjungan")) {
                                         Intent it = new Intent();
-                                        it.putExtra("kd_cust", v_kode_cust.get(position));
-                                        it.putExtra("nm_cust", v_nama_cust.get(position));
-                                        it.putExtra("alamat_cust", v_alamat_cust.get(position));
-                                        it.putExtra("aktivasi_cust", v_aktivasi_cust.get(position));
-                                        setResult(1, it);
-                                        onBackPressed();
-                                        finish();
+                                        if (v_otoritas.get(position).equals("GROSIR")) {
+                                            it.putExtra("kd_cust", v_kode_cust.get(position));
+                                            it.putExtra("nm_cust", v_nama_cust.get(position));
+                                            it.putExtra("alamat_cust", v_alamat_cust.get(position));
+                                            it.putExtra("aktivasi_cust", v_aktivasi_cust.get(position));
+                                            setResult(1, it);
+                                            onBackPressed();
+                                            finish();
+                                        } else {
+                                            Toasty.warning(act_data_customer.this, "Otoritas user bukan Grosir", Toast.LENGTH_SHORT).show();
+                                        }
                                     } else if (getIntent().getStringExtra("status").equals("aktifasi")) {
 
                                     }
