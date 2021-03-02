@@ -53,10 +53,10 @@ public class act_splash extends AppCompatActivity {
                     } else if (session.registered() == true  && session.loggedin() == false) {
                         startActivity(new Intent(getApplicationContext(), act_login.class));
                         finish();
-                    } else if (session.registered() == true  && session.loggedin() == true && session.getUserStatus().equals("1")) {
+                    } else if (session.registered() == true  && session.loggedin() == true && (session.getUserStatus().equals("ADMIN") || session.getUserStatus().equals("SUPER ADMIN"))) {
                         startActivity(new Intent(getApplicationContext(), act_home_admin.class));
                         finish();
-                    } else if (session.registered() == true  && session.loggedin() == true && session.getUserStatus().equals("5")) {
+                    } else if (session.registered() == true  && session.loggedin() == true && session.getUserStatus().equals("SALES")) {
                         startActivity(new Intent(getApplicationContext(), act_home_sales_order.class));
                         finish();
                     } else {

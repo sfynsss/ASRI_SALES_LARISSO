@@ -112,9 +112,9 @@ public class frm_user extends Fragment implements PrintingCallback {
             public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
                 TextView textView = (TextView) v.findViewById(R.id.text_listview);
                 if (textView.getText().equals("Gudang")){
-                    Intent intent = new Intent(getActivity(), act_pilih_gudang.class);
-                    getActivity().startActivity(intent);
-                    getActivity().finish();
+//                    Intent intent = new Intent(getActivity(), act_pilih_gudang.class);
+//                    getActivity().startActivity(intent);
+//                    getActivity().finish();
                 } else if (textView.getText().equals("Setting")){
                     if (Printooth.INSTANCE.hasPairedPrinter()){
                         Printooth.INSTANCE.removeCurrentPrinter();
