@@ -83,6 +83,7 @@ public class act_login extends AppCompatActivity {
                                     @Override
                                     public void onResponse(Call<UserResponse> call, Response<UserResponse> response) {
                                         if (response.isSuccessful()) {
+                                            System.out.println(response.body().getUser().getId());
                                             session.setLoggedin(true, response.body().getUser().getId()+"", response.body().getUser().getName()+"", response.body().getUser().getOtoritas().toString()+"", response.body().getUser().getApiToken() + "");
                                             session.setPegawai(response.body().getUser().getName()+"", response.body().getUser().getKdPeg()+"");
                                             if (response.body().getUser().getOtoritas().toString().equals("SUPER ADMIN") || response.body().getUser().getOtoritas().toString().equals("ADMIN")) {
