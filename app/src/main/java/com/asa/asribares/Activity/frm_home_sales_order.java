@@ -56,7 +56,7 @@ public class frm_home_sales_order extends Fragment {
         super.onCreate(savedInstanceState);
     }
 
-    LinearLayout kunjungan, data_order, customer, tagihan;
+    LinearLayout kunjungan, data_order, customer;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -67,7 +67,6 @@ public class frm_home_sales_order extends Fragment {
         kunjungan = view.findViewById(R.id.kunjungan);
         data_order = view.findViewById(R.id.data_order);
         customer = view.findViewById(R.id.customer);
-        tagihan = view.findViewById(R.id.tagihan);
 
         kunjungan.setOnClickListener(new View.OnClickListener() {
             @Override

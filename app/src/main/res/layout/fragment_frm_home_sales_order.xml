@@ -5,213 +5,194 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:weightSum="10"
+    android:background="#FAFAFA"
     tools:context=".Activity.frm_home_sales_order">
 
-    <LinearLayout
+    <ImageView
+        android:layout_width="127dp"
+        android:layout_height="39dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/dashboard_larisso_salesman_logo">
+    </ImageView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:text="Dashboard"
+        android:textColor="#000"
+        android:textSize="18sp"
+        android:fontFamily="@font/roboto_light">
+    </TextView>
+
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:gravity="center">
-        <TextView
+        android:layout_height="140dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginHorizontal="16dp"
+        app:cardCornerRadius="10dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="8dp"
+            android:orientation="vertical"
+            android:background="@drawable/dashboard_ic_sales_pict">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hallo, "
+                    android:textStyle="bold"
+                    android:textColor="#FFF">
+                </TextView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="nama_pengguna"
+                    android:textStyle="bold|italic"
+                    android:textColor="#FFA840">
+                </TextView>
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Selamat datang di aplikasi \nLarisso Salesman"
+                android:textColor="#FFF">
+            </TextView>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:text="Menu Aplikasi"
+        android:textColor="#000"
+        android:fontFamily="@font/roboto_light">
+    </TextView>
+
+    <LinearLayout
+        android:id="@+id/kunjungan"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/dashboard_bt_main">
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/dashboard_ic_kunjungan">
+        </ImageView>
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="DASHBOARD"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            android:textColor="#28306D">
-        </TextView>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="3"
-        android:orientation="horizontal"
-        android:weightSum="2"
-        android:padding="10dp">
-        <LinearLayout
-            android:id="@+id/kunjungan"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_margin="5dp"
-            android:orientation="vertical"
-            android:weightSum="10"
-            android:background="@drawable/sales_dashboard_rectangle_1">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="5"
-                android:paddingRight="10dp"
-                android:gravity="center_vertical|end">
-                <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:background="@drawable/sales_dashboard_icon1">
-                </ImageView>
-            </LinearLayout>
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="16dp"
+            android:orientation="vertical">
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="Kunjungan"
-                android:textColor="#fff"
-                android:textSize="18dp"
+                android:textSize="16sp"
                 android:textStyle="bold"
-                android:gravity="center_vertical"
-                android:paddingLeft="10dp">
+                android:textColor="#000">
             </TextView>
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="2"
-                android:text="Laporan Kunjungan"
-                android:textColor="#fff"
-                android:textSize="14dp"
-                android:gravity="center_vertical|top"
-                android:paddingLeft="10dp">
-            </TextView>
-        </LinearLayout>
-        <LinearLayout
-            android:id="@+id/data_order"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_margin="5dp"
-            android:orientation="vertical"
-            android:weightSum="10"
-            android:background="@drawable/sales_dashboard_rectangle_2">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="5"
-                android:paddingRight="10dp"
-                android:gravity="center_vertical|end">
-                <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:background="@drawable/sales_dashboard_icon2">
-                </ImageView>
-            </LinearLayout>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="2"
-                android:text="Order"
-                android:textColor="#fff"
-                android:textSize="18dp"
-                android:textStyle="bold"
-                android:gravity="center_vertical"
-                android:paddingLeft="10dp">
-            </TextView>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="2"
-                android:text="Laporan Order"
-                android:textColor="#fff"
-                android:textSize="14dp"
-                android:gravity="center_vertical|top"
-                android:paddingLeft="10dp">
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tambah data kunjungan ke customer"
+                android:textStyle="italic"
+                android:textColor="#000"
+                android:fontFamily="@font/roboto_light">
             </TextView>
         </LinearLayout>
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/data_order"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="3"
-        android:orientation="horizontal"
-        android:weightSum="2"
-        android:padding="10dp">
+        android:layout_height="80dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/dashboard_bt_main">
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/dashboard_ic_order">
+        </ImageView>
         <LinearLayout
-            android:id="@+id/customer"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_margin="5dp"
-            android:orientation="vertical"
-            android:weightSum="10"
-            android:background="@drawable/sales_dashboard_rectangle_3">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="5"
-                android:paddingRight="10dp"
-                android:gravity="center_vertical|end">
-                <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:background="@drawable/sales_dashboard_icon4">
-                </ImageView>
-            </LinearLayout>
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="16dp"
+            android:orientation="vertical">
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="2"
-                android:text="Customer"
-                android:textColor="#fff"
-                android:textSize="18dp"
-                android:textStyle="bold"
-                android:gravity="center_vertical"
-                android:paddingLeft="10dp">
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Laporan Order"
+                android:textSize="16sp"
+                android:textColor="#000"
+                android:textStyle="bold">
             </TextView>
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="2"
-                android:text="Data Customer"
-                android:textColor="#fff"
-                android:textSize="14dp"
-                android:gravity="center_vertical|top"
-                android:paddingLeft="10dp">
-            </TextView>
-        </LinearLayout>
-        <LinearLayout
-            android:visibility="gone"
-            android:id="@+id/tagihan"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_margin="5dp"
-            android:orientation="vertical"
-            android:weightSum="10"
-            android:background="@drawable/sales_dashboard_rectangle_4">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="5"
-                android:paddingRight="10dp"
-                android:gravity="center_vertical|end">
-                <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:background="@drawable/sales_dashboard_icon3">
-                </ImageView>
-            </LinearLayout>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="2"
-                android:text="Tagihan Sales"
-                android:textColor="#fff"
-                android:textSize="18dp"
-                android:textStyle="bold"
-                android:gravity="center_vertical"
-                android:paddingLeft="10dp">
-            </TextView>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="2"
-                android:text="Laporan Sales"
-                android:textColor="#fff"
-                android:textSize="14dp"
-                android:gravity="center_vertical|top"
-                android:paddingLeft="10dp">
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Data laporan order customer"
+                android:textStyle="italic"
+                android:textColor="#000"
+                android:fontFamily="@font/roboto_light">
             </TextView>
         </LinearLayout>
     </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/customer"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/dashboard_bt_main">
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/dashboard_ic_customer">
+        </ImageView>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="16dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Data Customer"
+                android:textSize="16sp"
+                android:textColor="#000"
+                android:textStyle="bold">
+            </TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lihat dan verivikasi data customer"
+                android:textStyle="italic"
+                android:textColor="#000"
+                android:fontFamily="@font/roboto_light">
+            </TextView>
+        </LinearLayout>
+    </LinearLayout>
+
+
 
 </LinearLayout>
