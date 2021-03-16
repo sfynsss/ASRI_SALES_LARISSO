@@ -66,7 +66,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:hint="alamat@email.com"
-                    android:background="null"
+                    android:background="@null"
                     android:fontFamily="@font/roboto_light">
                 </EditText>
             </LinearLayout>
@@ -101,7 +101,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:hint="Masukkan password"
-                        android:background="null"
+                        android:background="@null"
                         android:fontFamily="@font/roboto_light">
                     </EditText>
                 </LinearLayout>

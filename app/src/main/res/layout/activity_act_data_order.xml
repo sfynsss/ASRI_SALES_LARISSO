@@ -116,7 +116,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="8"
+        android:layout_weight="8.5"
         android:layout_marginTop="15dp"
         android:layout_marginHorizontal="16dp">
         <ListView
@@ -124,14 +124,13 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:divider="#00000000"
-            android:dividerHeight="5dp"></ListView>
+            android:dividerHeight="5dp">
+        </ListView>
     </LinearLayout>
-
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_weight="1.5"
         android:padding="5dp"
         android:background="#fff"
         android:gravity="center"
@@ -152,7 +151,6 @@
             android:textSize="15dp"
             android:layout_marginTop="5dp"/>
     </LinearLayout>
-
 </LinearLayout>
 
 </LinearLayout>

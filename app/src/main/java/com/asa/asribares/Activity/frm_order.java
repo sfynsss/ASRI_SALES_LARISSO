@@ -362,14 +362,10 @@ public class frm_order extends Fragment {
             @Override
             public void onResponse(Call<BaseResponse1> call, Response<BaseResponse1> response) {
                 if (response.isSuccessful()) {
-                    if (response.body().getMessage().equals("Data Tidak Ditemukan")){
-                        v_no_faktur.setText("OJ" + dateFormat1.format(date) + "/" + String.format("%03d", Integer.parseInt(session.getUserId())) + "/" + String.format("%07d", 1));
-                    } else {
-                        int fktr = Integer.parseInt(response.body().getMessage()) + 1;
-                        v_no_faktur.setText("OJ" + dateFormat1.format(date) + "/" + String.format("%03d", Integer.parseInt(session.getUserId())) + "/" + String.format("%07d", fktr));
-                    }
+                    int fktr = Integer.parseInt(response.body().getMessage()) + 1;
+                    System.out.println("int faktur = " + fktr);
+                    v_no_faktur.setText("OJ" + dateFormat1.format(date) + "/" + String.format("%03d", Integer.parseInt(session.getUserId())) + "/" + String.format("%07d", fktr));
                 } else {
-//                    System.out.println("disini1");
                     v_no_faktur.setText("OJ" + dateFormat1.format(date) + "/" + String.format("%03d", Integer.parseInt(session.getUserId())) + "/" + String.format("%07d", 1));
                 }
             }
@@ -377,7 +373,7 @@ public class frm_order extends Fragment {
             @Override
             public void onFailure(Call<BaseResponse1> call, Throwable t) {
 //                System.out.println("disini2");
-                v_no_faktur.setText("OJ" + dateFormat1.format(date) + "/" + String.format("%03d", Integer.parseInt(session.getUserId())) + "/" + String.format("%07d", 1));
+                v_no_faktur.setText("OJ" + dateFormat1.format(date) + "/" + String.format("%03d", Integer.parseInt(session.getUserId())) + "/" + String.format("%07d", 1).toString());
 //                System.out.println(t.getMessage());
             }
         });

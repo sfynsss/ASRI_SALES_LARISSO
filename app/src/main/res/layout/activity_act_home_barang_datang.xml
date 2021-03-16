@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:weightSum="10"
+    android:weightSum="640"
     android:orientation="vertical"
     tools:context=".Activity.act_home_barang_datang">
 
@@ -12,16 +12,16 @@
         android:id="@+id/contain"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="9.2">
-
+        android:layout_weight="584">
     </RelativeLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/navigation"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.8"
+        android:layout_weight="56"
         android:background="?android:attr/windowBackground"
-        app:menu="@menu/menu_barang_datang" />
+        app:menu="@menu/menu_barang_datang">
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
 
 </LinearLayout>
