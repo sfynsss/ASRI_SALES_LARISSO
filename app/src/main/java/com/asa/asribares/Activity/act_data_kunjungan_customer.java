@@ -93,10 +93,10 @@ public class act_data_kunjungan_customer extends AppCompatActivity {
         setContentView(R.layout.activity_act_kunjungan);
 
         btn_kunjungan = (Button) findViewById(R.id.tambah_kunjungan);
-        btn_search = (Button) findViewById(R.id.bt_search_kunjungan);
+        //btn_search = (Button) findViewById(R.id.bt_search_kunjungan);
         dt_start = (EditText) findViewById(R.id.date_start);
         dt_end = (EditText) findViewById(R.id.date_end);
-        listView = (ListView) findViewById(R.id.list_data_kunjungan);
+        //listView = (ListView) findViewById(R.id.list_data_kunjungan);
         session = new Session(this);
         api = RetrofitClient.createServiceWithAuth(Api.class, session.getToken());
 

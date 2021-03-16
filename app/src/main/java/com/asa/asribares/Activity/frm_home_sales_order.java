@@ -10,8 +10,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.asa.asribares.R;
+import com.asa.asribares.Session.Session;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -56,7 +58,9 @@ public class frm_home_sales_order extends Fragment {
         super.onCreate(savedInstanceState);
     }
 
+    TextView nama_pengguna;
     LinearLayout kunjungan, data_order, customer;
+    Session session;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -67,6 +71,9 @@ public class frm_home_sales_order extends Fragment {
         kunjungan = view.findViewById(R.id.kunjungan);
         data_order = view.findViewById(R.id.data_order);
         customer = view.findViewById(R.id.customer);
+        nama_pengguna = view.findViewById(R.id.nama_pengguna);
+        session = new Session(getContext());
+        nama_pengguna.setText(session.getUsername());
 
         kunjungan.setOnClickListener(new View.OnClickListener() {
             @Override

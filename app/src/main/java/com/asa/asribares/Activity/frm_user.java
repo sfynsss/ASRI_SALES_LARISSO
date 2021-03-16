@@ -16,6 +16,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -74,15 +75,15 @@ public class frm_user extends Fragment implements PrintingCallback {
         super.onCreate(savedInstanceState);
     }
 
-    TextView nama_user;
+    TextView nama_pengguna, email_pengguna, telp_pengguna;
     Session session;
-    ListView listView;
     String idgudang;
     String[] text={"Gudang", "Setting", "Logout"};
     String[] text2;
     Integer[] img = {R.drawable.ic_gudang, R.drawable.ic_setting, R.drawable.ic_logout};
     Printing printing;
     AdapterUser adapterUser;
+    RelativeLayout bt_setting, bt_logout;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -90,10 +91,15 @@ public class frm_user extends Fragment implements PrintingCallback {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_frm_user, container, false);
 
-        listView = (ListView) view.findViewById(R.id.list_view);
-        nama_user = (TextView) view.findViewById(R.id.nama_user);
+        nama_pengguna = (TextView) view.findViewById(R.id.nama_pengguna);
+        email_pengguna = (TextView) view.findViewById(R.id.email_pengguna);
+        telp_pengguna = (TextView) view.findViewById(R.id.telp_pengguna);
+        bt_setting = (RelativeLayout) view.findViewById(R.id.bt_setting);
+        bt_logout = (RelativeLayout) view.findViewById(R.id.bt_logout);
         session = new Session(getContext());
+
         idgudang = session.getGudang()+"";
+
         if (session.getStatusBt() == true) {
             text2= new String[]{"Gudang " + idgudang + " Terpilih", session.getNamaBt(), "Keluar Akun"};
         } else {
@@ -103,33 +109,33 @@ public class frm_user extends Fragment implements PrintingCallback {
         if (printing != null){
             printing.setPrintingCallback(this);
         }
-        adapterUser = new AdapterUser(getActivity(), text, text2, img);
-        listView.setAdapter(adapterUser);
-        nama_user.setText(session.getUsername());
 
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        adapterUser = new AdapterUser(getActivity(), text, text2, img);
+        nama_pengguna.setText(session.getNamaPegawai());
+        email_pengguna.setText(session.getKodePegawai());
+        //telp_pengguna.setText(session.getTelpUser());
+
+        bt_setting.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
-                TextView textView = (TextView) v.findViewById(R.id.text_listview);
-                if (textView.getText().equals("Gudang")){
-//                    Intent intent = new Intent(getActivity(), act_pilih_gudang.class);
-//                    getActivity().startActivity(intent);
-//                    getActivity().finish();
-                } else if (textView.getText().equals("Setting")){
-                    if (Printooth.INSTANCE.hasPairedPrinter()){
-                        Printooth.INSTANCE.removeCurrentPrinter();
-                    } else {
-                        startActivityForResult(new Intent(getActivity(),ScanningActivity.class), ScanningActivity.SCANNING_FOR_PRINTER);
-                        changePairAndUnpair();
-                    }
-                } else if (textView.getText().equals("Logout")){
-                    Intent intent = new Intent(getActivity(), act_login.class);
-                    session.setLoggedin(false, "", "", "","");
-                    session.setGudang(false, "GUDANG");
-                    session.setPegawai("", "");
-                    getActivity().startActivity(intent);
-                    getActivity().finish();
+            public void onClick(View v) {
+                if (Printooth.INSTANCE.hasPairedPrinter()){
+                    Printooth.INSTANCE.removeCurrentPrinter();
+                } else {
+                    startActivityForResult(new Intent(getActivity(),ScanningActivity.class), ScanningActivity.SCANNING_FOR_PRINTER);
+                    changePairAndUnpair();
                 }
+            }
+        });
+
+        bt_logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), act_login.class);
+                session.setLoggedin(false, "", "", "","");
+                session.setGudang(false, "GUDANG");
+                session.setPegawai("", "");
+                getActivity().startActivity(intent);
+                getActivity().finish();
             }
         });
 

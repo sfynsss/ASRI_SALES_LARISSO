@@ -71,6 +71,13 @@ public class Session {
         editor.commit();
     }
 
+    public void setEmail(String email) {
+        editor.putString("email", email);
+        editor.commit();
+    }
+
+    public String getEmail(){ return sharedPreferences.getString("email", ""); }
+
     public String getNamaBt() {
         return sharedPreferences.getString("bt_name", "");
     }
