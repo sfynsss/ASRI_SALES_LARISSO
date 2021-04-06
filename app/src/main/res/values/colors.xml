@@ -8,4 +8,11 @@
     <color name="green">#00bfa5</color>
     <color name="colorAccent">#2F26D9</color>
     <color name="pink">#ff4081</color>
+
+    <color name="biru_main">#2F26D9</color>
+    <color name="oren_main">#FFA840</color>
+    <color name="biru_secondary">#2880CE</color>
+    <color name="oren_secondary">#FBA66B</color>
+    <color name="putih">#FFFFFF</color>
+
 </resources>
