@@ -57,7 +57,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:hint="Cari nama customer ..."
+                android:hint="Cari nama barang ..."
                 android:text=""
                 android:inputType="text"
                 android:imeOptions="actionDone"

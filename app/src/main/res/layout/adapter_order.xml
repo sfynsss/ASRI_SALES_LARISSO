@@ -1,87 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
-    android:weightSum="10"
-    android:background="@drawable/sales_bg_kunjungan_adapter"
-    android:padding="10dp">
+    android:padding="8dp"
+    android:background="@drawable/sales_bg_kunjungan_adapter">
 
-    <LinearLayout
-        android:id="@+id/line1"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="2"
-        android:background="@drawable/ic_rectangle_5"
-        android:orientation="horizontal">
-        <TextView
-            android:id="@+id/kode_barang"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:enabled="false"
-            android:text="010001"
-            android:textColor="#fcfcfc"
-            android:textAlignment="center"
-            android:layout_gravity="center"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="0dp"
+    <TextView
+        android:id="@+id/kode_barang"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="6"
-        android:orientation="vertical">
+        android:text=""
+        android:hint="Kode Barang"
+        android:textColor="#FF5949"
+        android:textAlignment="center"
+        android:textSize="12sp" />
 
-        <TextView
-            android:id="@+id/nama_barang"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Nama Barang"
-            android:paddingLeft="5dp"
-            android:textColor="#28306D"
-            android:textSize="15dp"
-            android:textStyle="bold" />
+    <TextView
+        android:id="@+id/nama_barang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nama Barang"
+        android:textColor="#28306D"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:layout_below="@id/kode_barang"/>
 
-        <TextView
-            android:id="@+id/harga_barang"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Harga Barang"
-            android:textStyle="bold"
-            android:paddingLeft="5dp"
-            android:textColor="#FF5949"/>
+    <TextView
+        android:id="@+id/tx_harga"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Harga : "
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:textSize="12sp"
+        android:layout_below="@id/nama_barang"/>
 
-        <TextView
-            android:id="@+id/qty"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint=""
-            android:paddingLeft="5dp"
-            android:textColor="#494949"/>
+    <TextView
+        android:id="@+id/harga_barang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Rp1"
+        android:textStyle="bold"
+        android:textColor="#FF5949"
+        android:textSize="12sp"
+        android:layout_below="@id/nama_barang"
+        android:layout_toRightOf="@id/tx_harga"/>
 
-    </LinearLayout>
+    <TextView
+        android:id="@+id/tx_qty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jumlah : "
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:textSize="12sp"
+        android:layout_below="@id/tx_harga"/>
 
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="2"
-        android:orientation="vertical">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="TOTAL"
-            android:textStyle="bold"
-            android:textColor="#28306D"
-            android:layout_gravity="center"/>
-        <TextView
-            android:id="@+id/total"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:layout_gravity="center"
-            android:textStyle="bold"
-            android:textColor="#72D5A9"
-            android:text="100.000"/>
-    </LinearLayout>
+    <TextView
+        android:id="@+id/qty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="1"
+        android:textColor="#494949"
+        android:textSize="12sp"
+        android:layout_below="@id/tx_harga"
+        android:layout_toRightOf="@id/tx_qty"/>
 
-</LinearLayout>
+    <TextView
+        android:id="@+id/tx_total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Harga"
+        android:textStyle="bold"
+        android:textColor="#28306D"
+        android:textSize="12sp"
+        android:layout_below="@+id/tx_qty"/>
+
+    <TextView
+        android:id="@+id/total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="#72D5A9"
+        android:hint="100.000"
+        android:layout_below="@id/tx_qty"
+        android:layout_alignParentEnd="true"/>
+
+</RelativeLayout>
