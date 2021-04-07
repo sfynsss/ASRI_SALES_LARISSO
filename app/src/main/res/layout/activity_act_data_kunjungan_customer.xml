@@ -77,8 +77,8 @@
         android:dividerHeight="5dp"
         android:divider="#00FFFFFF"
         android:layout_marginHorizontal="16dp"
-        android:layout_marginTop="10dp">
-
+        android:layout_marginTop="10dp"
+        tools:listitem="@layout/adapter_kunjungan">
     </ListView>
 
 </LinearLayout>

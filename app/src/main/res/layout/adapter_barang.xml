@@ -6,7 +6,7 @@
     <RelativeLayout
         android:id="@+id/list_barang"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="100dp"
         android:layout_margin="5dp"
         android:padding="10dp"
         android:background="@drawable/sales_bg_kunjungan_adapter">

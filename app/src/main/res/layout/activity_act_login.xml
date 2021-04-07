@@ -8,12 +8,13 @@
     android:background="#E9F2FE"
     tools:context=".Activity.act_login">
 
-    <LinearLayout
-        android:layout_width="200dp"
-        android:layout_height="200dp"
+    <ImageView
+        android:layout_width="160dp"
+        android:layout_height="45dp"
         android:layout_marginVertical="24dp"
-        android:layout_gravity="center">
-    </LinearLayout>
+        android:layout_gravity="center"
+        android:background="@drawable/dashboard_larisso_salesman_logo">
+    </ImageView>
 
     <TextView
         android:layout_width="wrap_content"
@@ -67,6 +68,7 @@
                     android:layout_height="wrap_content"
                     android:hint="alamat@email.com"
                     android:background="@null"
+                    android:inputType="textEmailAddress"
                     android:fontFamily="@font/roboto_light">
                 </EditText>
             </LinearLayout>
@@ -102,6 +104,7 @@
                         android:layout_height="wrap_content"
                         android:hint="Masukkan password"
                         android:background="@null"
+                        android:inputType="textPassword"
                         android:fontFamily="@font/roboto_light">
                     </EditText>
                 </LinearLayout>
