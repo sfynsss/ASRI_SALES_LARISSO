@@ -188,12 +188,13 @@ public class frm_order extends Fragment {
 //        URL_SIMPAN_MASTER = session.getUrlSimpanMaster();
 //        URL_SIMPAN_DETAIL = session.getUrlSimpanDetail();
         date = new Date();
-        v_user_aktif.setText("User : " +session.getUsername());
-        v_tgl_aktif.setText("Tgl : " +dateFormat.format(date));
+        v_user_aktif.setText(session.getUsername());
+        v_tgl_aktif.setText(dateFormat.format(date));
         if (session.getCustomer().equals("")) {
             v_cust_aktif.setText("");
         } else {
-            v_cust_aktif.setText(session.getCustomer()+" / "+session.getAlamatCustomer());
+            //v_cust_aktif.setText(session.getCustomer()+" / "+session.getAlamatCustomer());
+            v_cust_aktif.setText(session.getCustomer());
         }
         v_harga_tot.setText(formatRupiah.format(total));
 
